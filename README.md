@@ -15,3 +15,6 @@ The evaluation will focus on both the quality of the tool and its test suit.
 ## Intermediate Steps
 
 ## Resources
+
+ * [Sppon](http://spoon.gforge.inria.fr/): A library for source code analysis and transformation.
+ * [Javassist](http://jboss-javassist.github.io/javassist/): A labrary for byte code manipulation.
