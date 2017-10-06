@@ -8,7 +8,9 @@ The evaluation will focus on both the quality of the tool and its test suit.
 
 ### Assignement 1: Static Analysis
 
-The goal of this assignement is to create a program able to detect code smells in java projects. A code smell is a region of code that exhibit commonly known poor pattern, resulting in error proneness.
+A code smell is a region of code that exhibit commonly known poor pattern, resulting in error proneness.
+
+The goal of this assignement is to create a program able to detect code smells in java projects. The program will explore the structure of the observed project with the help of [Sppon](http://spoon.gforge.inria.fr/).
  * Large classes or methods
  * High cyclomatic complexity
  * Duplicated code
@@ -26,6 +28,7 @@ The goal of this assignement is to create a program that computes the code cover
 
 ### Assignement 3: Mutation Testing
 
+Mutation testing aim at assessing the quality of the test base of a project. To do so it insert error into the project in order to see if the test base detect it. A program transformed is called mutant, if it passes the tests it is a survivor. A transformation is also called a mutation operator. 
 
 ### Improvements
 
