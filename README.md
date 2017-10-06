@@ -65,12 +65,29 @@ Take into account that null test could have been done in some other methods.
  
 ### Assignement 2: Dynamic Analysis
 
-Unlike Static Analysis, [Dynamic Analysis]() inspects the behaviour or a running program. It can extract useful information such as the code that is being actually executed during testing, that is, the code that is being covered by the test suite. The goal of this assignment is to create a program that computes the code actually covered by the test suite of a given Java project. Your tool should be able to perform at least two of the following analysis:
+Unlike Static Analysis, [Dynamic Analysis](https://en.wikipedia.org/wiki/Dynamic_program_analysis) inspects the behaviour of a running program. It can extract useful information such as the code that is being actually executed during testing, that is, the code that is being covered by the test suite. 
+The goal of this assignment is to create a program that computes the code actually covered by the test suite of a given Java project. For that you can create a Java agent (more on this [here](http://www.tomsquest.com/blog/2014/01/intro-java-agent-and-bytecode-manipulation/)) to perform the code modification at runtime, and a separated program that computes a report from the information collected.
 
-* Count the number of times each instruction was executed.
+Your tool should be able to perform at least two of the following analysis:
+
+* Count the number of times each line in the source code was executed.
 * Determine for each branch if all parts has been executed (Branch coverage). 
+```java
+if( a ) fou();
+else barre();
+```
+ In the example above, if a is set to false, the first line is covered but not the first branch.
+
 * Obtain the sequence of method calls performed during testing.
 * Record the values used as parameters of constant types for each method.
+```java
+String fou(String str, int i) {
+ return str.substring(0,i);
+}
+```
+A motivative example could be the method above. If **fou** is only called with positive values, it will cover all method lines, but not detect a problem for negative values. Your tool should track all values used for **i** and **str** and display them.
+
+A good asset for this assignment could be [Javassist](http://jboss-javassist.github.io/javassist/) which is a library for byte code manipulation.
 
 ### Assignment 3: Mutation Testing
 
@@ -79,7 +96,7 @@ Your task for this assignment is to create a tool that performs mutation testing
 
 * Replace the boolean expression of a conditional instruction by **false** and, in a second moment by **true**.
 * Remove all instructions in the body of a **void** method.
-* Replace the body of a boolean method by a single **return true** instruction.
+* Replace the body of a boolean method by a single **return true** (or **return false**) instruction.
 * Perform the following operator substitution in the context of arithmetic expressions:
 
 | Original operator | Replaced by |
@@ -90,7 +107,17 @@ Your task for this assignment is to create a tool that performs mutation testing
 |        /          |      *      |
 
 * Remove an arbitrary part of a boolean expression. For example: **a && !b** could become **a** or **!b**
-* Replace a method call by a predefined value.
+* Replace one method call by a predefined value.
+```java
+int i = fou();
+int j = fou();
+```
+gets transformed into 
+```java
+int i = 5;
+int j = fou();
+```
+
 * In the presence of an integer constant **x**, replace it by **x+1**, **x-1**, **2*x** and **x/2**.  
 * Replace a comparison operator by another given the following possible substitutions:
 
@@ -109,18 +136,21 @@ A mutation tool can perform the transformations at bytecode level or static sour
 Your tool should provide a way to configure the mutation operators to be used in the analysis.
 
 
-### Improvements
+### Remarks
+The assignments described above contain the minimum functionalities excpected, but you are encouraged to add any  functionlities that you find valuable. 
+A strong **emphasis** on rigourous testing and other good development practices is expected of you and will be taken into account for the grade.
+For the sake of simplicity we expect you to build your project with mvn and junit and you can assume that the same requirements apply for the projects to be analyzed by you.
 
- * UI
- * Additional features
- * ...
 
-### Project to test
+### Possible target projects
 
+Using real projects as target can be troublesome, so we recommend you to start with the following ones. (We encourage you to go beyond this list)
+
+ * [commons-cli](https://github.com/apache/commons-cli)
  * [commons-codec](https://github.com/apache/commons-codec)
  * [commons-collection](https://github.com/apache/commons-collections)
- * [commons-io](https://github.com/apache/commons-io)
  * [commons-lang](https://github.com/apache/commons-lang)
+ * [commons-math](https://github.com/apache/commons-math)
 
 ## Resources
 
