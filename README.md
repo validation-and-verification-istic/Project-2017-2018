@@ -65,16 +65,49 @@ Take into account that null test could have been done in some other methods.
  
 ### Assignement 2: Dynamic Analysis
 
-The goal of this assignement is to create a program that computes the code coverage of a java project's tests.
- * Yes/no
- * Counter
- * Branch
- * Depth
- * Input Domain
+Unlike Static Analysis, [Dynamic Analysis]() inspects the behaviour or a running program. It can extract useful information such as the code that is being actually executed during testing, that is, the code that is being covered by the test suite. The goal of this assignment is to create a program that computes the code actually covered by the test suite of a given Java project. Your tool should be able to perform at least two of the following analysis:
 
-### Assignement 3: Mutation Testing
+* Count the number of times each instruction was executed.
+* Determine for each branch if all parts has been executed (Branch coverage). 
+* Obtain the sequence of method calls performed during testing.
+* Record the values used as parameters of constant types for each method.
 
-Mutation testing aim at assessing the quality of the test base of a project. To do so it insert error into the project in order to see if the test base detect it. A program transformed is called mutant, if it passes the tests it is a survivor. A transformation is also called a mutation operator. 
+### Assignment 3: Mutation Testing
+
+[Mutation Testing](https://en.wikipedia.org/wiki/Mutation_testing) is a technique that evaluates the quality of a test suite. A test suite is considered good if it is able to detect bugs. The idea behind Mutation Testing is to create modified versions of the original program, or **mutants** by inserting artificial bugs and then check if the test suite is able to detect those changes. A **mutation** could be simple, for example, replacing **-** by **+** in the context of an arithmetic expression. Other examples could be to replace the boolean expression in a conditional instruction by **false** or replacing a method call by some value. Each type of transformation is usually called a **mutation operator**. A mutation operator can create one or more mutants given the same code.
+Your task for this assignment is to create a tool that performs mutation testing on a given Java project. Your tool should incorporate at least 3 of the following mutation operators:
+
+* Replace the boolean expression of a conditional instruction by **false** and, in a second moment by **true**.
+* Remove all instructions in the body of a **void** method.
+* Replace the body of a boolean method by a single **return true** instruction.
+* Perform the following operator substitution in the context of arithmetic expressions:
+
+| Original operator | Replaced by |
+|-------------------|-------------|
+|        +          |      -      |
+|        -          |      +      |
+|        *          |      /      |
+|        /          |      *      |
+
+* Remove an arbitrary part of a boolean expression. For example: **a && !b** could become **a** or **!b**
+* Replace a method call by a predefined value.
+* In the presence of an integer constant **x**, replace it by **x+1**, **x-1**, **2*x** and **x/2**.  
+* Replace a comparison operator by another given the following possible substitutions:
+
+| Original operator | Replaced by |
+|-------------------|-------------|
+|        <          |     <=      |
+|        >          |     >=      |
+|        <=         |      <      |
+|        >=         |      >      |
+
+* Replace the right part of an assignment by a predefined value.
+
+You are free to include all the extra operators you want.
+A mutation tool can perform the transformations at bytecode level or static source code. This decision is left to you.
+[PIT](http://pitest.org/) is a state of the art mutation testing tool for Java programs. In its web site you can find useful information about Mutation Testing and an extended list of possible mutation operators.
+Your tool should provide a way to configure the mutation operators to be used in the analysis.
+
 
 ### Improvements
 
