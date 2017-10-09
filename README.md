@@ -2,14 +2,14 @@
 
 ## Assignement
 
-Each group of students shall choose one of the assignements. Each of these explore an aspect of software testing. It must be implemented in Java as a Maven project. 
+Each group of students shall choose one of the assignements. Each of these explores an aspect of software testing. It must be implemented in Java as a Maven project. 
 The evaluation will focus on both the quality of the tool and its test suite. Systematic controls will be performed by the end of sessions 4 and 7. Final deadline will be on December 22nd 23:59 PM CET. See [Deadlines](#deadlines) section for more details.
 
 ### Assignement 1: Static Analysis
 
 Static analysis consists in processing source code of an application, to extract information from it.
 
-In this assignement, you shall create a tool that use static analysis to detect code smells in Java projects. The tool will explore the structure of the observed project with the help of [Spoon](http://spoon.gforge.inria.fr/).
+In this assignement, you shall create a tool that uses static analysis to detect code smells in Java projects. The tool will explore the structure of the observed project with the help of [Spoon](http://spoon.gforge.inria.fr/).
 
 A [code smell](https://en.wikipedia.org/wiki/Code_smell) is a region of code that exhibits commonly known poor code pattern, resulting in error proneness. Typical examples include huge classes containing too many methods, or methods containing too many nested branches.
 
@@ -75,7 +75,7 @@ Your tool should be able to perform at least two of the following analysis:
 if( a ) fou();
 else barre();
 ```
- In the example above, if a is set to false, the first line is covered but not the first branch.
+ In the example above, if `a` is set to `false`, the first line is covered but not the first branch.
 
 * Obtain the sequence of method calls performed during testing.
 * Record the values used as parameters of constant types for each method.
@@ -84,18 +84,18 @@ String fou(String str, int i) {
  return str.substring(0,i);
 }
 ```
-A motivative example could be the method above. If **fou** is only called with positive values, it will cover all method lines, but not detect a problem for negative values. Your tool should track all values used for **i** and **str** and display them.
+A motivative example could be the method above. If `fou` is only called with positive values, it will cover all method lines, but not detect a problem for negative values. Your tool should track all values used for `i` and `str` and display them.
 
 A good asset for this assignment could be [Javassist](http://jboss-javassist.github.io/javassist/) which is a library for byte code manipulation.
 
 ### Assignment 3: Mutation Testing
 
-[Mutation Testing](https://en.wikipedia.org/wiki/Mutation_testing) is a technique that evaluates the quality of a test suite. A test suite is considered good if it is able to detect bugs. The idea behind Mutation Testing is to create modified versions of the original program, or **mutants** by inserting artificial bugs and then check if the test suite is able to detect those changes. A **mutation** could be simple, for example, replacing **-** by **+** in the context of an arithmetic expression. Other examples could be to replace the boolean expression in a conditional instruction by **false** or replacing a method call by some value. Each type of transformation is usually called a **mutation operator**. A mutation operator can create one or more mutants given the same code.
+[Mutation Testing](https://en.wikipedia.org/wiki/Mutation_testing) is a technique that evaluates the quality of a test suite. A test suite is considered good if it is able to detect bugs. The idea behind Mutation Testing is to create modified versions of the original program, or **mutants** by inserting artificial bugs and then check if the test suite is able to detect those changes. A **mutation** could be simple, for example, replacing **-** by **+** in the context of an arithmetic expression. Other examples could be to replace the boolean expression in a conditional instruction by `false` or replacing a method call by some value. Each type of transformation is usually called a **mutation operator**. A mutation operator can create one or more mutants given the same code.
 Your task for this assignment is to create a tool that performs mutation testing on a given Java project. Your tool should incorporate at least 3 of the following mutation operators:
 
-* Replace the boolean expression of a conditional instruction by **false** and, in a second moment by **true**.
-* Remove all instructions in the body of a **void** method.
-* Replace the body of a boolean method by a single **return true** (or **return false**) instruction.
+* Replace the boolean expression of a conditional instruction by `false` and, in a second moment by `true`.
+* Remove all instructions in the body of a `void` method.
+* Replace the body of a boolean method by a single `return true` (or `return false`) instruction.
 * Perform the following operator substitution in the context of arithmetic expressions:
 
 | Original operator | Replaced by |
@@ -105,7 +105,7 @@ Your task for this assignment is to create a tool that performs mutation testing
 |        *          |      /      |
 |        /          |      *      |
 
-* Remove an arbitrary part of a boolean expression. For example: **a && !b** could become **a** or **!b**
+* Remove an arbitrary part of a boolean expression. For example: `a && !b` could become `a` or `!b`
 * Replace one method call by a predefined value.
 ```java
 int i = fou();
@@ -117,7 +117,7 @@ int i = 5;
 int j = fou();
 ```
 
-* In the presence of an integer constant **x**, replace it by **x+1**, **x-1**, **2*x** and **x/2**.  
+* In the presence of an integer constant `x`, replace it by `x+1`, `x-1`, `2*x` and `x/2`.  
 * Replace a comparison operator by another given the following possible substitutions:
 
 | Original operator | Replaced by |
@@ -137,8 +137,8 @@ Your tool should provide a way to configure the mutation operators to be used in
 
 ### Remarks
 The assignments described above contain the minimum functionalities excpected, but you are encouraged to add any  functionlities that you find valuable. 
-A strong **emphasis** on rigourous testing and other good development practices is expected of you and will be taken into account for the grade.
-For the sake of simplicity we expect you to build your project with mvn and junit and you can assume that the same requirements apply for the projects to be analyzed by you.
+A strong **emphasis** on rigourous testing and other good development practices is expected from you and will be taken into account for the grade.
+For the sake of simplicity we expect you to build your project with Maven and junit and you can assume that the same requirements apply for the projects to be analyzed by you.
 
 ## Requirements
 
