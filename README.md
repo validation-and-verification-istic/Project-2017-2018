@@ -3,7 +3,7 @@
 ## Assignement
 
 Each group of students shall choose one of the assignements. Each of these explore an aspect of software testing. It must be implemented in java as a maven project. 
-The evaluation will focus on both the quality of the tool and its test suite. Systematic controls will be performed by the end of sessions 4 and 7. Final deadline will be on December 23th 0:00 AM CET. See [Deadlines](#deadlines) section for more details.
+The evaluation will focus on both the quality of the tool and its test suite. Systematic controls will be performed by the end of sessions 4 and 7. Final deadline will be on December 22nd 23:59 PM CET. See [Deadlines](#deadlines) section for more details.
 
 
 ### Assignement 1: Static Analysis
@@ -153,16 +153,16 @@ You are expected to create a public git repository containing at least the follo
 At the end of **session 1**, you should have at least decided on the assignement and set up a git repository containing a squeleton Maven project which passes tests.
 
 
-After **session 4** (November the 23th 0:00 AM CET for group IL, November the 8th 0:00 AM CET for group IL alternance), you are expected to have implemented some initial functionlities.
+After **session 4** (November the 22nd 23:59 PM CET for group IL, November the 7th 23:59 PM CET for group IL alternance), you are expected to have implemented some initial functionlities.
 Your repository will be cloned and tested at this point. Some analytic tools such as [Pit](http://pitest.org/), [Descartes](https://github.com/STAMP-project/pitest-descartes) and [Cobertura](http://cobertura.github.io/cobertura/) will be used to assess the quality of your test suite.
 At the begining of **session 5** we will provide you with feedbacks.
 
 
-After **session 7** (November the 30th 0:00 AM CET for group IL, December the 6th 0:00 AM CET for group IL alternance), you are expected to have most functionalities running. We will recreate the process described previously, and compare the results.
+After **session 7** (November the 29th 23:59 PM CET for group IL, December the 5th 23:59 PM CET for group IL alternance), you are expected to have most functionalities running. We will recreate the process described previously, and compare the results.
 
 Feedbacks will be returned to you by the begining of session 8.
 
-Final deadline will be **December the 23th 0:00 AM CET**. 
+Final deadline will be **December the 22nd 23:59 PM CET CET**. 
 
 ### Possible target projects
 
