@@ -143,10 +143,17 @@ For the sake of simplicity we expect you to build your project with mvn and juni
 
 ## Requirements
 
+### Minimal requirements
+
 You are expected to create a public git repository containing at least the following items :
  * a **maven project** containing your code and a **strong junit test suite**
  * a **readme** file specifying how to build your code, how to use the tool on another project, and a section containing the list of targets on which you have tested your tool succesfully.
  * a **report** describing the functionalities of your tool, what problem does it solve, and both the relevence of the solution and its accuracy. A section about how you assessed this accuracy and test your tool overall is expected. You should also mention the problems you have encontered during the developpment and how you solved them.
+
+### Additional requirements
+
+While meeting the minimal requirements will only give you an average grade, you are expected to put additional thought on tests such as using a continuous integration system ([travis](https://travis-ci.org/) or [jenkins](https://jenkins.io/), or implement additional features (visualization of results, GUI, additional core functionalities).
+
 
 ## Deadlines
 
