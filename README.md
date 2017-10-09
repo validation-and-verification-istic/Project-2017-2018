@@ -3,7 +3,7 @@
 ## Assignement
 
 Each group of students shall choose one of the assignements. Each of these explore an aspect of software testing. It must be implemented in java as a maven project. 
-The evaluation will focus on both the quality of the tool and its test suit.
+The evaluation will focus on both the quality of the tool and its test suite.
 
 
 ### Assignement 1: Static Analysis
@@ -141,6 +141,28 @@ The assignments described above contain the minimum functionalities excpected, b
 A strong **emphasis** on rigourous testing and other good development practices is expected of you and will be taken into account for the grade.
 For the sake of simplicity we expect you to build your project with mvn and junit and you can assume that the same requirements apply for the projects to be analyzed by you.
 
+## Requirements
+
+You are expected to create a public git repository containing at least the following items :
+ * a **maven project** containing your code and a **strong junit test suite**
+ * a **readme** file specifying how to build your code, how to use the tool on another project, and a section containing the list of targets on which you have tested your tool succesfully.
+ * a **report** describing the functionalities of your tool, what problem does it solve, and both the relevence of the solution and its accuracy. A section about how you assessed this accuracy and test your tool overall is expected. You should also mention the problems you have encontered during the developpment and how you solved them.
+
+## Deadlines
+
+At the end of **session 1**, you should have at least decided on the assignement and set up a git repository containing a squeleton Maven project which passes tests.
+
+
+After **session 4** (November the 23th 0:00 AM CET for group IL, November the 8th 0:00 AM CET for group IL alternance), you are expected to have implemented some initial functionlities.
+Your repository will be cloned and tested at this point. Some analytic tools such as [Pit](http://pitest.org/), [Descartes](https://github.com/STAMP-project/pitest-descartes) and [Cobertura](http://cobertura.github.io/cobertura/) will be used to assess the quality of your test suite.
+At the begining of **session 5** we will provide you with feedbacks.
+
+
+After **session 7** (November the 30th 0:00 AM CET for group IL, December the 6th 0:00 AM CET for group IL alternance), you are expected to have most functionalities running. We will recreate the process described previously, and compare the results.
+
+Feedbacks will be returned to you by the begining of session 8.
+
+Final deadline will be **December the 23th 0:00 AM CET**. 
 
 ### Possible target projects
 
