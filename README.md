@@ -2,9 +2,8 @@
 
 ## Assignement
 
-Each group of students shall choose one of the assignements. Each of these explore an aspect of software testing. It must be implemented in java as a maven project. 
+Each group of students shall choose one of the assignements. Each of these explore an aspect of software testing. It must be implemented in Java as a Maven project. 
 The evaluation will focus on both the quality of the tool and its test suite. Systematic controls will be performed by the end of sessions 4 and 7. Final deadline will be on December 22nd 23:59 PM CET. See [Deadlines](#deadlines) section for more details.
-
 
 ### Assignement 1: Static Analysis
 
