@@ -15,6 +15,7 @@ A [code smell](https://en.wikipedia.org/wiki/Code_smell) is a region of code tha
 
 You will implement the following:
  * High [cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity): Compute the cyclomatic complexity of each methods in the project.
+
 And choose one among the following tasks:
  * [Duplicated code](https://en.wikipedia.org/wiki/Duplicate_code): Detect cases of code duplication. Bare in mind that code duplication goes beyond text repetition.
  For example (from wikipedia)
