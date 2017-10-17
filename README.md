@@ -13,8 +13,9 @@ In this assignement, you shall create a tool that uses static analysis to detect
 
 A [code smell](https://en.wikipedia.org/wiki/Code_smell) is a region of code that exhibits commonly known poor code pattern, resulting in error proneness. Typical examples include huge classes containing too many methods, or methods containing too many nested branches.
 
-You will choose one among the following tasks:
+You will implement the following:
  * High [cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity): Compute the cyclomatic complexity of each methods in the project.
+And choose one among the following tasks:
  * [Duplicated code](https://en.wikipedia.org/wiki/Duplicate_code): Detect cases of code duplication. Bare in mind that code duplication goes beyond text repetition.
  For example (from wikipedia)
 ```java
