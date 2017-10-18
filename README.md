@@ -161,7 +161,7 @@ While meeting the minimal requirements will only give you an average grade, you 
 At the end of **session 1**, you should have at least decided on the assignement and set up a git repository containing a squeleton Maven project which passes tests.
 
 
-After **session 4** (November the 22nd 23:59 PM CET for group IL, November the 7th 23:59 PM CET for group IL alternance), you are expected to have implemented some initial functionlities.
+After **session 4** (November the 22nd 23:59 PM CET for group IL, November the 8th 23:59 PM CET for group IL alternance), you are expected to have implemented some initial functionalities.
 Your repository will be cloned and tested at this point. Some analytic tools such as [Pit](http://pitest.org/), [Descartes](https://github.com/STAMP-project/pitest-descartes) and [Cobertura](http://cobertura.github.io/cobertura/) will be used to assess the quality of your test suite.
 At the begining of **session 5** we will provide you with feedbacks.
 
