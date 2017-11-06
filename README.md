@@ -149,7 +149,7 @@ For the sake of simplicity we expect you to build your project with Maven and ju
 You are expected to create a public git repository containing at least the following items :
  * a **maven project** containing your code and a **strong junit test suite**
  * a **readme** file specifying how to build your code, how to use the tool on another project, and a section containing the list of targets on which you have tested your tool succesfully.
- * a **report** describing the functionalities of your tool, what problem does it solve, and both the relevence of the solution and its accuracy. A section about how you assessed this accuracy and test your tool overall is expected. You should also mention the problems you have encontered during the developpment and how you solved them.
+ * a **report** describing the functionalities of your tool, what problem does it solve, and both the relevence of the solution and its accuracy. A section about how you assessed this accuracy and test your tool overall is expected. You should also mention the problems you have encontered during the developpment and how you solved them. Guidelines concerning this report [can be found here](http://people.rennes.inria.fr/Benoit.Baudry/wp-content/uploads/2013/09/Instructions_for_report.pdf)
 
 ### Additional requirements
 
