@@ -124,10 +124,10 @@ int j = fou();
 
 | Original operator | Replaced by |
 |-------------------|-------------|
-|        <          |     >=      |
-|        >          |     <=      |
-|        <=         |      >      |
-|        >=         |      <      |
+|        <          |     <=      |
+|        >          |     >=      |
+|        <=         |      <      |
+|        >=         |      >      |
 
 * Replace the right part of an assignment by a predefined value.
 
